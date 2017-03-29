@@ -1,0 +1,117 @@
+    <Resources>
+        <Resource number="1000258" code="1000258" type="E" status="A" gender="M" license="2" alldivisions="0">
+            <LastName>xxx</LastName>
+            <FirstName />
+            <MiddleName />
+            <Initials />
+            <Title code="MR">
+                <Description>Mr.</Description>
+                <Salutation>Dear Mister</Salutation>
+                <Abbreviation>Mr.</Abbreviation>
+            </Title>
+            <MaidenName />
+            <Language code="EN" />
+            <Nationality code="" />
+            <PrefixAffix>
+                <Prefix />
+                <Affix />
+                <BirthPrefix />
+                <BirthAffix />
+            </PrefixAffix>
+            <OriginCountry />
+            <Qualification />
+            <Race />
+            <Marital type="S" />
+            <Office>
+                <MainLocation code="" />
+                <Location code="" />
+                <Room code="" />
+                <Phone />
+                <PhoneExt />
+                <Mobile />
+                <MobileShortcut />
+                <Email />
+            </Office>
+            <Private>
+                <Addresses>
+                    <Address type="V">
+                        <AddressLine1 />
+                        <AddressLine2 />
+                        <AddressNo />
+                        <PostalCode />
+                        <City />
+                        <Country code="NL" />
+                        <Phone />
+                    </Address>
+                </Addresses>
+                <Mobile />
+                <Email />
+                <Relatives />
+                <Fax />
+            </Private>
+            <Employment>
+                <DateStart>2017-02-22</DateStart>
+                <ProbationPeriod>0</ProbationPeriod>
+                <ProbationPeriodType>M</ProbationPeriodType>
+                <DateStartVacancy>2017-02-22</DateStartVacancy>
+                <FTE>1</FTE>
+                <Access>1</Access>
+                <BackOfficeAccess>1</BackOfficeAccess>
+            </Employment>
+            <Organization>
+                <Division code="521">
+                    <Description>521 Sagro Aannemingsmaatschappij Zeeland B.V.</Description>
+                    <Currency code="EUR" />
+                </Division>
+                <Costcenter code="21CC">
+                    <Description>Standaard kostenplaats</Description>
+                </Costcenter>
+                <JobTitle code="CONS">
+                    <Description>Consultant</Description>
+                    <Level>13</Level>
+                    <JobGroup code="TC">
+                        <Description>Training &amp; Consultancy</Description>
+                    </JobGroup>
+                    <JobActivity code="C">
+                        <Description>Consultancy</Description>
+                        <JobGroup code="TC">
+                            <Description>Training &amp; Consultancy</Description>
+                        </JobGroup>
+                    </JobActivity>
+                    <IsProductive>0</IsProductive>
+                    <ScaleMin>0</ScaleMin>
+                    <ScaleMax>0</ScaleMax>
+                </JobTitle>
+                <Manager number="1" code="Quercis">
+                    <LastName>Administrator</LastName>
+                    <FirstName />
+                    <MiddleName />
+                    <Organization>
+                        <Costcenter code="12CC">
+                            <Description>Standaard kostenplaats</Description>
+                        </Costcenter>
+                    </Organization>
+                </Manager>
+                <Focus />
+                <SecurityLevel>13</SecurityLevel>
+                <PurchaseLimit>
+                    <Amount>
+                        <Currency code="EUR" />
+                        <Value>0</Value>
+                    </Amount>
+                </PurchaseLimit>
+                <JobLevel>0</JobLevel>
+            </Organization>
+            <Banking>
+                <SocialSecurity>125618402</SocialSecurity>
+            </Banking>
+            <Contracts>
+                <Contract>
+                    <Category>Standaard</Category>
+                    <TypeCode>BWBEPAALD</TypeCode>
+                    <TypeDesc>Bepaalde tijd</TypeDesc>
+                    <StartDate>2017-02-22</StartDate>
+                    <Status>3</Status>
+                </Contract>
+            </Contracts>
+        </Resource>

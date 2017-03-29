@@ -1,0 +1,353 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="eExact">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Resources">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Resource" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="LastName"/>
+                    <xs:element type="xs:string" name="FirstName"/>
+                    <xs:element type="xs:string" name="MiddleName"/>
+                    <xs:element type="xs:string" name="Initials"/>
+                    <xs:element name="Title">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="Description"/>
+                          <xs:element type="xs:string" name="Salutation"/>
+                          <xs:element type="xs:string" name="Abbreviation"/>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="code" use="optional"/>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="MaidenName"/>
+                    <xs:element name="Language">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="code" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Nationality">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="code" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="PrefixAffix">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="Prefix"/>
+                          <xs:element type="xs:string" name="Affix"/>
+                          <xs:element type="xs:string" name="BirthPrefix"/>
+                          <xs:element type="xs:string" name="BirthAffix"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="OriginCountry"/>
+                    <xs:element type="xs:string" name="Qualification"/>
+                    <xs:element type="xs:string" name="Race"/>
+                    <xs:element name="Marital">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="type" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Office">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="MainLocation">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:string" name="code" use="optional"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Location">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:string" name="code" use="optional"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Room">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:string" name="code" use="optional"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element type="xs:string" name="Phone"/>
+                          <xs:element type="xs:string" name="PhoneExt"/>
+                          <xs:element type="xs:string" name="Mobile"/>
+                          <xs:element type="xs:string" name="MobileShortcut"/>
+                          <xs:element type="xs:string" name="Email"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Private">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Addresses">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Address">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="AddressLine1"/>
+                                      <xs:element type="xs:string" name="AddressLine2"/>
+                                      <xs:element type="xs:string" name="AddressNo"/>
+                                      <xs:element type="xs:string" name="PostalCode"/>
+                                      <xs:element type="xs:string" name="City"/>
+                                      <xs:element name="Country">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute type="xs:string" name="code" use="optional"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element type="xs:string" name="Phone"/>
+                                    </xs:sequence>
+                                    <xs:attribute type="xs:string" name="type" use="optional"/>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element type="xs:string" name="Mobile"/>
+                          <xs:element type="xs:string" name="Email"/>
+                          <xs:element type="xs:string" name="Relatives"/>
+                          <xs:element type="xs:string" name="Fax"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Employment">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:date" name="DateStart"/>
+                          <xs:element type="xs:byte" name="ProbationPeriod"/>
+                          <xs:element type="xs:string" name="ProbationPeriodType"/>
+                          <xs:element type="xs:date" name="DateStartVacancy"/>
+                          <xs:element type="xs:byte" name="FTE"/>
+                          <xs:element type="xs:byte" name="Access"/>
+                          <xs:element type="xs:byte" name="BackOfficeAccess"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Organization">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Division">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="Description"/>
+                                <xs:element name="Currency">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="code" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute type="xs:short" name="code" use="optional"/>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Costcenter">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="Description"/>
+                              </xs:sequence>
+                              <xs:attribute type="xs:string" name="code" use="optional"/>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="JobTitle">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="Description"/>
+                                <xs:element type="xs:byte" name="Level"/>
+                                <xs:element name="JobGroup">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="Description"/>
+                                    </xs:sequence>
+                                    <xs:attribute type="xs:string" name="code" use="optional"/>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="JobActivity">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="Description"/>
+                                      <xs:element name="JobGroup">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element type="xs:string" name="Description"/>
+                                          </xs:sequence>
+                                          <xs:attribute type="xs:string" name="code" use="optional"/>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute type="xs:string" name="code" use="optional"/>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element type="xs:byte" name="IsProductive"/>
+                                <xs:element type="xs:byte" name="ScaleMin"/>
+                                <xs:element type="xs:byte" name="ScaleMax"/>
+                              </xs:sequence>
+                              <xs:attribute type="xs:string" name="code" use="optional"/>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Manager">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="LastName"/>
+                                <xs:element type="xs:string" name="FirstName"/>
+                                <xs:element type="xs:string" name="MiddleName"/>
+                                <xs:element name="Organization">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Costcenter">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element type="xs:string" name="Description"/>
+                                          </xs:sequence>
+                                          <xs:attribute type="xs:string" name="code" use="optional"/>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute type="xs:byte" name="number" use="optional"/>
+                              <xs:attribute type="xs:string" name="code" use="optional"/>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element type="xs:string" name="Focus"/>
+                          <xs:element type="xs:byte" name="SecurityLevel"/>
+                          <xs:element name="PurchaseLimit">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Amount">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Currency">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute type="xs:string" name="code" use="optional"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element type="xs:byte" name="Value"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element type="xs:byte" name="JobLevel"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Banking">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:int" name="SocialSecurity"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Contracts">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Contract">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="Category"/>
+                                <xs:element type="xs:string" name="TypeCode"/>
+                                <xs:element type="xs:string" name="TypeDesc"/>
+                                <xs:element type="xs:date" name="StartDate"/>
+                                <xs:element type="xs:byte" name="Status"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:int" name="number" use="optional"/>
+                  <xs:attribute type="xs:int" name="code" use="optional"/>
+                  <xs:attribute type="xs:string" name="type" use="optional"/>
+                  <xs:attribute type="xs:string" name="status" use="optional"/>
+                  <xs:attribute type="xs:string" name="gender" use="optional"/>
+                  <xs:attribute type="xs:byte" name="license" use="optional"/>
+                  <xs:attribute type="xs:byte" name="alldivisions" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Topics">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Topic">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="code"/>
+                      <xs:attribute type="xs:string" name="ts_d"/>
+                      <xs:attribute type="xs:byte" name="count"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Messages">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Message">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Topic">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="code"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:date" name="Date"/>
+                    <xs:element type="xs:string" name="Description"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:byte" name="type"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
